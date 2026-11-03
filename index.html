@@ -28,7 +28,10 @@
   </section>
 
   <section id="work">
-    <h2>Work</h2>
+    <div class="sec-head">
+      <h2 class="title">Work</h2>
+      <a class="all" href="works.html">View all works <span aria-hidden="true">→</span></a>
+    </div>
     <div class="carousel">
     <button class="chev" type="button" aria-label="Previous projects" data-dir="-1"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
     <div class="track">
@@ -80,15 +83,92 @@
   </section>
 
   <section id="build">
-    <h2>Build</h2>
+    <h2 class="title">Build</h2>
     <ul class="list">
+      <li><strong>Tanglish voice</strong><span>Speak Tanglish and it prints exactly what you said as Roman Tanglish text, and reads text back aloud, all free and local. Includes a dataset app for recording and editing audio to fine-tune Whisper. Planned next: support for AI tools like Claude and Cursor via MCP / other integrations.</span></li>
+      <li><strong>PR review skill</strong><span>A Claude Code skill that reads a pull request, lists the issues and drafts review comments into a pending review. I check and submit the review myself.</span></li>
       <li><strong>MCP servers</strong><span>Custom Model Context Protocol servers built with FastMCP to give AI agents access to real tools and data.</span></li>
-      <li><strong>PR review skill</strong><span>A custom Claude Code skill I use for pull request review, alongside manual review.</span></li>
+      <li><strong>Music scrapers</strong><span>Scrapers that collect albums, tracks and music directors into clean CSVs, with year browsing, upserts, id tables and rate limiting. Planned next: a recommendation engine that takes listening events like manual plays, searches and repeats, finds how songs relate to each other, and suggests songs from those relations.</span></li>
+      <li><strong>Phone personalization app</strong><span>Personal Flutter app for automation, widgets, notifications and quick actions on my phone. Sideloaded, not published.</span></li>
     </ul>
   </section>
 
+  <section id="experience">
+    <div class="sec-head">
+      <h2 class="title">Experience</h2>
+      <a class="all" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF) <span aria-hidden="true">→</span></a>
+    </div>
+    <p class="about-text xp-intro">Product work delivered as a Francium Tech engineer since May 2021, plus freelance projects.</p>
+    <article class="xp-row">
+      <div class="xp-left">
+        <p class="xp-role">Full Stack Developer</p>
+        <p class="xp-when">Oct 2026 – Present</p>
+      </div>
+      <div>
+        <h3><strong>Fampic Registry</strong> <span>· Freelance</span></h3>
+        <p>Built an offline-first work and payment registry for a photo studio, where devices sync peer to peer without a server.</p>
+        <ul class="tags"><li>Flutter</li><li>Rust</li><li>C#</li><li>Swift</li><li>iroh</li></ul>
+      </div>
+    </article>
+    <article class="xp-row">
+      <div class="xp-left">
+        <p class="xp-role">Technical Lead</p>
+        <p class="xp-when">Oct 2026 – Present</p>
+      </div>
+      <div>
+        <h3><strong>Teldat VPN</strong> <span>· via Francium Tech</span></h3>
+        <p>Led delivery of a multi-tenant VPN security platform across four codebases, with malware scanning and network telemetry.</p>
+        <ul class="tags"><li>Rails</li><li>React</li><li>Go</li><li>Rust</li><li>Kotlin</li></ul>
+      </div>
+    </article>
+    <article class="xp-row">
+      <div class="xp-left">
+        <p class="xp-role">Full Stack Developer</p>
+        <p class="xp-when">Feb 2026 – Present</p>
+      </div>
+      <div>
+        <h3><strong>Magizh Foods</strong> <span>· Freelance</span></h3>
+        <p>Built a cloud kitchen platform solo: meal subscriptions, four user roles on web and mobile, and WhatsApp-first ordering.</p>
+        <ul class="tags"><li>Rails 8</li><li>React</li><li>Flutter</li><li>Razorpay</li><li>WhatsApp API</li></ul>
+      </div>
+    </article>
+    <article class="xp-row">
+      <div class="xp-left">
+        <p class="xp-role">Data Engineer</p>
+        <p class="xp-when">Jan 2026 – Sep 2026</p>
+      </div>
+      <div>
+        <h3><strong>Golden Set Analytics</strong> <span>· via Francium Tech</span></h3>
+        <p>Built the data pipeline behind a tennis analytics platform: scrapers land raw rows in an intake layer and resolve into one dataset.</p>
+        <ul class="tags"><li>Django</li><li>PostgreSQL</li><li>Celery</li><li>Playwright</li></ul>
+      </div>
+    </article>
+    <article class="xp-row">
+      <div class="xp-left">
+        <p class="xp-role">Technical Lead</p>
+        <p class="xp-when">Jul 2025 – Dec 2025</p>
+      </div>
+      <div>
+        <h3><strong>Atrium</strong> <span>· via Francium Tech</span></h3>
+        <p>Led a parental-control app for Android and iOS: database and architecture design, authentication and iOS Screen Time constraints.</p>
+        <ul class="tags"><li>Rails 8</li><li>Flutter</li><li>Kotlin</li><li>Swift</li></ul>
+      </div>
+    </article>
+    <article class="xp-row">
+      <div class="xp-left">
+        <p class="xp-role">Lead Developer</p>
+        <p class="xp-when">Feb 2024 – Jun 2025</p>
+      </div>
+      <div>
+        <h3><strong>Pan Agro</strong> <span>· via Francium Tech</span></h3>
+        <p>Led an agri marketplace: database design, transport tendering, market forecasting and a virtual data room.</p>
+        <ul class="tags"><li>Go</li><li>Rails</li><li>React Native</li><li>Apache Druid</li><li>FastAPI</li></ul>
+      </div>
+    </article>
+  </section>
+
   <section id="about">
-    <h2>About</h2>
+    <h2 class="title">About</h2>
     <p class="about-text">I am a full stack developer and technical lead at Francium Tech, working since 2021. I like owning a product from the schema to the store release, and I am most useful where web, mobile and backend meet.</p>
     <ul class="skills">
       <li><b>Backend</b><span>Ruby on Rails, Django, FastAPI, Node.js, Go, Rust</span></li>
@@ -99,7 +179,7 @@
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
+    <h2 class="title">Contact</h2>
     <p class="about-text">Open to full stack and technical lead roles.</p>
     <p class="links"><a href="https://github.com/Abinash0416" target="_blank" rel="noopener">GitHub</a> <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></p>
   </section>
@@ -137,7 +217,11 @@ const recenter = () => {
     track.style.scrollSnapType = "";
   }
 };
-track.addEventListener("scroll", () => { clearTimeout(settle); settle = setTimeout(recenter, 140); }, { passive: true });
+track.addEventListener("scroll", () => {
+  track.classList.add("scrolling");
+  clearTimeout(settle);
+  settle = setTimeout(() => { recenter(); track.classList.remove("scrolling"); }, 140);
+}, { passive: true });
 chevs.forEach(b => b.addEventListener("click", () => track.scrollBy({ left: step() * b.dataset.dir, behavior: "smooth" })));
 window.addEventListener("resize", center);
 center();
