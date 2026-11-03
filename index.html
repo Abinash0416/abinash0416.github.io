@@ -5,82 +5,142 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Abinash Devendhiran — Full Stack Developer</title>
 <meta name="description" content="Portfolio of Abinash Devendhiran, full stack developer and technical lead.">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<a class="skip" href="#work">Skip to content</a>
-
 <header class="top">
-  <a class="brand" href="#">Abinash D.</a>
+  <a class="brand" href="#">Abinash Devendhiran</a>
   <nav aria-label="Primary">
     <a href="#work">Work</a>
-    <a href="#builds">Builds</a>
-    <a href="#experience">Experience</a>
+    <a href="#build">Build</a>
+    <a href="#about">About</a>
     <a href="#contact">Contact</a>
+    <a class="pill" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
   </nav>
 </header>
 
 <main>
   <section class="hero">
-    <p class="eyebrow">Full stack developer · Technical lead</p>
-    <h1>I build products end to end, from the database to the device.</h1>
-    <p class="lede">Rails, React, Python and Go on the backend and web, Flutter, Kotlin and Swift on mobile. Placeholder introduction: this paragraph will describe what I do and what I am looking for next.</p>
-    <p class="cta"><a class="btn" href="#work">See selected work</a> <a class="btn ghost" href="#contact">Get in touch</a></p>
+    <h1>Abinash Devendhiran</h1>
+    <p class="role">Full stack developer</p>
+    <p class="lede">I design and ship products end to end, from the database and APIs to web, Android, iOS and desktop clients, with AI in the loop. I build with Claude Code agents and skills, review pull requests with a custom skill alongside manual review, and have built MCP servers with FastMCP. Architecture and final review stay with me.</p>
   </section>
 
   <section id="work">
-    <h2>Selected work</h2>
+    <h2>Work</h2>
+    <div class="carousel">
+    <button class="chev" type="button" aria-label="Previous projects" data-dir="-1"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="track">
     <article class="card">
-      <div class="meta"><span>2026</span><span>Technical Lead</span></div>
-      <h3>Project One</h3>
-      <p>Placeholder summary of a multi-tenant platform: the problem it solves, who uses it and what was built. Replace with a real case study.</p>
-      <ul class="tags"><li>Ruby on Rails</li><li>React</li><li>Rust</li><li>OpenVPN</li></ul>
+      <div class="meta"><span>Technical Lead</span></div>
+      <h3>Parental-control app</h3>
+      <p>Parents set app, category and website limits for their children on Android and iOS.</p>
+      <p class="hard"><strong>Hard part:</strong> iOS cannot list installed apps or read usage directly, so limits run through Swift Screen Time extensions.</p>
+      <ul class="tags"><li>Rails 8</li><li>Flutter</li><li>Kotlin</li><li>Swift</li><li>PostgreSQL</li></ul>
     </article>
     <article class="card">
-      <div class="meta"><span>2026</span><span>Data Engineer</span></div>
-      <h3>Project Two</h3>
-      <p>Placeholder summary of a data pipeline: sources, how raw data becomes one clean dataset and what decisions it supports.</p>
-      <ul class="tags"><li>Python</li><li>Django</li><li>PostgreSQL</li><li>Celery</li></ul>
+      <div class="meta"><span>Technical Lead</span></div>
+      <h3>Enterprise VPN and security platform</h3>
+      <p>Admins set per-user profiles that agents enforce over OpenVPN, with malware scanning and network telemetry.</p>
+      <p class="hard"><strong>Hard part:</strong> Monitoring traffic regardless of VPN state: full tunnel, split tunnel or VPN off.</p>
+      <ul class="tags"><li>Rails</li><li>React</li><li>Go</li><li>Rust</li><li>Kotlin</li><li>ClickHouse</li></ul>
     </article>
     <article class="card">
-      <div class="meta"><span>2025</span><span>Technical Lead</span></div>
-      <h3>Project Three</h3>
-      <p>Placeholder summary of a cross-platform mobile app: platform constraints, how each was solved and what shipped.</p>
-      <ul class="tags"><li>Flutter</li><li>Kotlin</li><li>Swift</li><li>Rails</li></ul>
+      <div class="meta"><span>Data Engineer</span></div>
+      <h3>Tennis analytics platform</h3>
+      <p>Scrapers land raw rows in an intake layer, and promotion resolves them into one clean dataset for rankings, stats and scouting.</p>
+      <p class="hard"><strong>Hard part:</strong> Protected-site scraping, import/export modes, rate limiting and safe backfills.</p>
+      <ul class="tags"><li>Django</li><li>DRF</li><li>PostgreSQL</li><li>Celery</li><li>Playwright</li></ul>
     </article>
     <article class="card">
-      <div class="meta"><span>2024</span><span>Lead Developer</span></div>
-      <h3>Project Four</h3>
-      <p>Placeholder summary of a marketplace: roles, flows, forecasting and contracts.</p>
-      <ul class="tags"><li>Go</li><li>React Native</li><li>Apache Druid</li><li>FastAPI</li></ul>
+      <div class="meta"><span>Lead Developer</span></div>
+      <h3>Agri marketplace</h3>
+      <p>Marketplace with transport tendering, market data forecasting and a virtual data room.</p>
+      <p class="hard"><strong>Hard part:</strong> Forecasting pipeline and a smart-contract based secure flow.</p>
+      <ul class="tags"><li>Go</li><li>Rails</li><li>React Native</li><li>Apache Druid</li><li>FastAPI</li></ul>
     </article>
+    <article class="card">
+      <div class="meta"><span>Full Stack Developer · Freelance</span></div>
+      <h3>Cloud kitchen platform</h3>
+      <p>Customers order one-time or subscribe to meal plans, and the kitchen runs everything from an admin portal. Built solo.</p>
+      <p class="hard"><strong>Hard part:</strong> Four roles with their own flows, per-meal delivery addresses, and skipping meals inside WhatsApp.</p>
+      <ul class="tags"><li>Rails 8</li><li>React</li><li>Flutter</li><li>Razorpay</li><li>WhatsApp API</li></ul>
+    </article>
+    <article class="card">
+      <div class="meta"><span>Full Stack Developer · Freelance</span></div>
+      <h3>Photo studio registry</h3>
+      <p>Serverless work and payment registry where every phone and computer holds a full copy of the data.</p>
+      <p class="hard"><strong>Hard part:</strong> Peer-to-peer sync with no server: version vectors and Lamport clocks make every device converge.</p>
+      <ul class="tags"><li>Flutter</li><li>Rust</li><li>C#</li><li>Swift</li><li>iroh</li></ul>
+    </article>
+    </div>
+    <button class="chev" type="button" aria-label="Next projects" data-dir="1"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
   </section>
 
-  <section id="builds">
-    <h2>Smaller builds</h2>
+  <section id="build">
+    <h2>Build</h2>
     <ul class="list">
-      <li><strong>Build A</strong><span>Placeholder one-line description of a side project.</span></li>
-      <li><strong>Build B</strong><span>Placeholder one-line description of a side project.</span></li>
-      <li><strong>Build C</strong><span>Placeholder one-line description of a side project.</span></li>
+      <li><strong>MCP servers</strong><span>Custom Model Context Protocol servers built with FastMCP to give AI agents access to real tools and data.</span></li>
+      <li><strong>PR review skill</strong><span>A custom Claude Code skill I use for pull request review, alongside manual review.</span></li>
     </ul>
   </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
-    <ol class="timeline">
-      <li><span class="n">01</span><div><h3>Solution Consultant, Francium Tech</h3><p class="when">2021 to present</p><p>Placeholder: one or two lines on scope and impact.</p></div></li>
-      <li><span class="n">02</span><div><h3>Earlier roles</h3><p class="when">Before 2021</p><p>Placeholder: one or two lines on scope and impact.</p></div></li>
-    </ol>
+  <section id="about">
+    <h2>About</h2>
+    <p class="about-text">I am a full stack developer and technical lead at Francium Tech, working since 2021. I like owning a product from the schema to the store release, and I am most useful where web, mobile and backend meet.</p>
+    <ul class="skills">
+      <li><b>Backend</b><span>Ruby on Rails, Django, FastAPI, Node.js, Go, Rust</span></li>
+      <li><b>Frontend and mobile</b><span>React, Next.js, Flutter, Kotlin, Swift</span></li>
+      <li><b>Data and infra</b><span>PostgreSQL, ClickHouse, Redis, Docker, Kafka</span></li>
+      <li><b>AI workflow</b><span>Claude Code agents and skills, FastMCP</span></li>
+    </ul>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Placeholder: email, LinkedIn and GitHub links will go here.</p>
+    <p class="about-text">Open to full stack and technical lead roles.</p>
+    <p class="links"><a href="https://github.com/Abinash0416" target="_blank" rel="noopener">GitHub</a> <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></p>
   </section>
 </main>
 
-<footer>
-  <p>© 2026 Abinash Devendhiran · Placeholder content, work in progress.</p>
-</footer>
+<footer><p>© 2026 Abinash Devendhiran</p></footer>
+<script>
+const title = document.querySelector(".hero h1");
+new IntersectionObserver(([e]) => {
+  document.documentElement.classList.toggle("scrolled", !e.isIntersecting);
+}, { rootMargin: "-64px 0px 0px 0px" }).observe(title);
+
+const track = document.querySelector(".track");
+const chevs = document.querySelectorAll(".chev");
+const originals = [...track.children];
+const before = originals.map(c => c.cloneNode(true));
+const after = originals.map(c => c.cloneNode(true));
+[...before, ...after].forEach(c => c.setAttribute("aria-hidden", "true"));
+before.forEach(c => track.insertBefore(c, originals[0]));
+after.forEach(c => track.appendChild(c));
+
+const step = () => originals[1].offsetLeft - originals[0].offsetLeft;
+const setWidth = () => step() * originals.length;
+const start = () => originals[0].offsetLeft - track.offsetLeft - parseFloat(getComputedStyle(track).paddingLeft);
+const center = () => { track.style.scrollBehavior = "auto"; track.scrollLeft = start(); track.style.scrollBehavior = ""; };
+
+let settle;
+const recenter = () => {
+  const s0 = start();
+  const w = setWidth();
+  if (track.scrollLeft < s0 - w / 2 || track.scrollLeft >= s0 + w / 2) {
+    const shift = track.scrollLeft < s0 ? w : -w;
+    track.style.scrollSnapType = "none";
+    track.scrollLeft += shift;
+    track.style.scrollSnapType = "";
+  }
+};
+track.addEventListener("scroll", () => { clearTimeout(settle); settle = setTimeout(recenter, 140); }, { passive: true });
+chevs.forEach(b => b.addEventListener("click", () => track.scrollBy({ left: step() * b.dataset.dir, behavior: "smooth" })));
+window.addEventListener("resize", center);
+center();
+</script>
 </body>
 </html>
