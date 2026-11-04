@@ -68,7 +68,7 @@
     <p class="hard-box"><strong>Hard part</strong>Conflict resolution without a server: Lamport clocks with a device id tie-break and tombstones for deletes, so every device converges to the same state without using wall-clock time.</p>
     <ul class="dots">
         <li><strong>Device discovery.</strong> Devices find each other through a group-secret-derived beacon and connect over iroh, with hole punching and a relay as fallback.</li>
-        <li><strong>Data sync.</strong> Devices exchange version vectors and sync only the missing events, with live push and peer-to-peer relaying.</li>
+        <li><strong>Sync protocol design.</strong> Devices exchange version vectors and sync only the missing events, with live push and peer-to-peer relaying.</li>
         <li><strong>Offline-first storage.</strong> A local event log and version vector on each device, with entries rebuilt from the log and full export and import as the backup.</li>
         <li><strong>Security.</strong> Event payloads encrypted with a shared group data key, per-login Ed25519 signatures on every event, and Argon2-derived password keys.</li>
     </ul>
@@ -101,7 +101,7 @@
     <ul class="dots">
         <li><strong>Scrapers.</strong> Built and maintained scrapers for CoreTennis, ITA, ITF, WTN and ATP/WTA with requests, BeautifulSoup and Playwright. Runs can scrape only into intake or push on to bedrock, dry-run, and use token-bucket rate limiting, targeted by tournament, tier, tour, age band or roster, with resumable full-archive sweeps.</li>
         <li><strong>Player data.</strong> Anchored players to immutable source-of-truth details and merged records across sources using per-source trust scores. Built a country registry of 250 countries with ISO3, ISO2, numeric, IOC and FIFA codes and aliases.</li>
-        <li><strong>Backfill tooling.</strong> A snapshot, delete, re-scrape, re-promote workflow with per-batch transactions. It refuses to start without a btree index, since a BRIN index made each foreign-key check 2,119 ms against 0.55 ms.</li>
+        <li><strong>Backfill workflow design.</strong> A snapshot, delete, re-scrape, re-promote workflow with per-batch transactions. It refuses to start without a btree index, since a BRIN index made each foreign-key check 2,119 ms against 0.55 ms.</li>
         <li><strong>State machine repair.</strong> Repaired about 178.7k intake players stuck at new with a read-only sweep that re-ran the production matcher, and held back 104 flagged rows for human review.</li>
     </ul>
     <ul class="tags"><li>Python</li><li>Django</li><li>DRF</li><li>PostgreSQL (pg_trgm)</li><li>Celery Beat</li><li>Redis</li><li>Playwright</li><li>BeautifulSoup</li><li>Docker</li></ul>

@@ -210,8 +210,15 @@ a.card { text-decoration: none; color: inherit; cursor: pointer; }
 .tl-bar.base { background: color-mix(in srgb, var(--accent) 28%, #000); color: var(--ink); }
 .tl-lane.static:hover { background: none; }
 .tl-out.right { padding-right: 0; padding-left: 10px; }
-.badges { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
-.badge { display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px 12px 18px; border: 1px solid #2c2c2c; border-radius: 999px; background: var(--surface); color: var(--ink); text-decoration: none; font: 600 16px/1 Arial, Helvetica, sans-serif; transition: border-color .2s ease, transform .2s ease; }
+.badges { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; margin-top: 28px; }
+.badges .badge { grid-column: span 2; }
+.badges .badge:nth-child(n+4) { grid-column: span 3; }
+@media (max-width: 640px) { .badges { grid-template-columns: 1fr; } .badges .badge, .badges .badge:nth-child(n+4) { grid-column: auto; } }
+.badge { display: flex; flex-direction: column; gap: 10px; padding: 14px 22px 16px 18px; border: 1px solid #2c2c2c; border-radius: 16px; background: var(--surface); color: var(--ink); text-decoration: none; transition: border-color .2s ease, transform .2s ease; }
+.badge .b-top { display: flex; align-items: center; gap: 8px; }
+.badge .b-top svg { width: 15px; height: 15px; }
+.badge .b-label { font: 600 12px/1 Arial, Helvetica, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.badge .b-val { font: 600 17px/1.2 Arial, Helvetica, sans-serif; color: var(--ink); }
 .badge svg { color: var(--accent); flex: none; }
 .badge:hover { border-color: var(--accent); transform: translateY(-2px); }
 .badge:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
