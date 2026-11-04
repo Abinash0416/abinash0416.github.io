@@ -12,9 +12,7 @@
 <header class="top">
   <a class="brand" href="#">Abinash Devendhiran</a>
   <nav aria-label="Primary">
-    <a href="#work">Work</a>
-    <a href="#build">Build</a>
-    <a href="#about">About</a>
+    <a href="works.html">Work</a>
     <a href="#contact">Contact</a>
     <a class="pill" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
   </nav>
@@ -35,62 +33,74 @@
     <div class="carousel">
     <button class="chev" type="button" aria-label="Previous projects" data-dir="-1"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
     <div class="track">
-    <article class="card">
+    <a class="card" href="works.html#atrium">
       <div class="meta"><span>Technical Lead</span></div>
       <h3>Parental-control app</h3>
       <p>Parents set app, category and website limits for their children on Android and iOS.</p>
       <p class="hard"><strong>Hard part:</strong> iOS cannot list installed apps or read usage directly, so limits run through Swift Screen Time extensions.</p>
       <ul class="tags"><li>Rails 8</li><li>Flutter</li><li>Kotlin</li><li>Swift</li><li>PostgreSQL</li></ul>
-    </article>
-    <article class="card">
+    </a>
+    <a class="card" href="works.html#teldat">
       <div class="meta"><span>Technical Lead</span></div>
       <h3>Enterprise VPN and security platform</h3>
       <p>Admins set per-user profiles that agents enforce over OpenVPN, with malware scanning and network telemetry.</p>
       <p class="hard"><strong>Hard part:</strong> Monitoring traffic regardless of VPN state: full tunnel, split tunnel or VPN off.</p>
       <ul class="tags"><li>Rails</li><li>React</li><li>Go</li><li>Rust</li><li>Kotlin</li><li>ClickHouse</li></ul>
-    </article>
-    <article class="card">
+    </a>
+    <a class="card" href="works.html#gsa">
       <div class="meta"><span>Data Engineer</span></div>
       <h3>Tennis analytics platform</h3>
       <p>Scrapers land raw rows in an intake layer, and promotion resolves them into one clean dataset for rankings, stats and scouting.</p>
       <p class="hard"><strong>Hard part:</strong> Protected-site scraping, import/export modes, rate limiting and safe backfills.</p>
       <ul class="tags"><li>Django</li><li>DRF</li><li>PostgreSQL</li><li>Celery</li><li>Playwright</li></ul>
-    </article>
-    <article class="card">
+    </a>
+    <a class="card" href="works.html#panagro">
       <div class="meta"><span>Lead Developer</span></div>
       <h3>Agri marketplace</h3>
       <p>Marketplace with transport tendering, market data forecasting and a virtual data room.</p>
       <p class="hard"><strong>Hard part:</strong> Forecasting pipeline and a smart-contract based secure flow.</p>
       <ul class="tags"><li>Go</li><li>Rails</li><li>React Native</li><li>Apache Druid</li><li>FastAPI</li></ul>
-    </article>
-    <article class="card">
+    </a>
+    <a class="card" href="works.html#magizh">
       <div class="meta"><span>Full Stack Developer · Freelance</span></div>
       <h3>Cloud kitchen platform</h3>
       <p>Customers order one-time or subscribe to meal plans, and the kitchen runs everything from an admin portal. Built solo.</p>
       <p class="hard"><strong>Hard part:</strong> Four roles with their own flows, per-meal delivery addresses, and skipping meals inside WhatsApp.</p>
       <ul class="tags"><li>Rails 8</li><li>React</li><li>Flutter</li><li>Razorpay</li><li>WhatsApp API</li></ul>
-    </article>
-    <article class="card">
+    </a>
+    <a class="card" href="works.html#fampic">
       <div class="meta"><span>Full Stack Developer · Freelance</span></div>
       <h3>Photo studio registry</h3>
       <p>Serverless work and payment registry where every phone and computer holds a full copy of the data.</p>
       <p class="hard"><strong>Hard part:</strong> Peer-to-peer sync with no server: version vectors and Lamport clocks make every device converge.</p>
       <ul class="tags"><li>Flutter</li><li>Rust</li><li>C#</li><li>Swift</li><li>iroh</li></ul>
-    </article>
+    </a>
     </div>
     <button class="chev" type="button" aria-label="Next projects" data-dir="1"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
     </div>
   </section>
 
+  <section id="skills">
+    <h2 class="title">Skills</h2>
+    <ul class="skills">
+      <li><b>Agentic development</b><ul class="tags"><li>Claude Code (agents, skills, hooks)</li><li>MCP servers (FastMCP)</li><li>Multi-agent orchestration</li><li>LLM APIs</li></ul></li>
+      <li><b>Backend</b><ul class="tags"><li>Ruby on Rails</li><li>Node.js</li><li>Django</li><li>FastAPI</li><li>Go</li><li>Rust</li><li>C#</li><li>WebSocket</li><li>REST API design</li><li>JWT auth and RBAC</li></ul></li>
+      <li><b>Frontend and mobile</b><ul class="tags"><li>React</li><li>Next.js</li><li>Vue</li><li>Nuxt</li><li>Tailwind</li><li>Redux</li><li>Flutter</li><li>Kotlin</li><li>Swift</li></ul></li>
+      <li><b>Database and infra</b><ul class="tags"><li>PostgreSQL</li><li>ClickHouse</li><li>Apache Druid</li><li>Elasticsearch</li><li>Redis</li><li>MongoDB</li><li>Docker</li><li>MinIO</li><li>Railway</li><li>Firebase</li><li>AWS (S3)</li><li>OpenVPN</li></ul></li>
+      <li><b>Integrations</b><ul class="tags"><li>Razorpay</li><li>Stripe</li><li>WhatsApp API</li><li>FCM</li><li>Google Maps</li><li>SendGrid</li><li>Slack API</li><li>Keycloak (SSO)</li><li>Kafka</li><li>Swagger / OpenAPI</li></ul></li>
+      <li><b>Practices</b><ul class="tags"><li>Database design</li><li>Web scraping</li><li>Data pipelines</li><li>Team leadership</li><li>Code review (AI-assisted)</li></ul></li>
+    </ul>
+  </section>
+
   <section id="build">
     <h2 class="title">Build</h2>
-    <ul class="list">
-      <li><strong>Tanglish voice</strong><span>Speak Tanglish and it prints exactly what you said as Roman Tanglish text, and reads text back aloud, all free and local. Includes a dataset app for recording and editing audio to fine-tune Whisper. Planned next: support for AI tools like Claude and Cursor via MCP / other integrations.</span></li>
-      <li><strong>PR review skill</strong><span>A Claude Code skill that reads a pull request, lists the issues and drafts review comments into a pending review. I check and submit the review myself.</span></li>
-      <li><strong>MCP servers</strong><span>Custom Model Context Protocol servers built with FastMCP to give AI agents access to real tools and data.</span></li>
-      <li><strong>Music scrapers</strong><span>Scrapers that collect albums, tracks and music directors into clean CSVs, with year browsing, upserts, id tables and rate limiting. Planned next: a recommendation engine that takes listening events like manual plays, searches and repeats, finds how songs relate to each other, and suggests songs from those relations.</span></li>
-      <li><strong>Phone personalization app</strong><span>Personal Flutter app for automation, widgets, notifications and quick actions on my phone. Sideloaded, not published.</span></li>
-    </ul>
+    <div class="build-grid">
+      <article class="card build-card wide"><h3>Tanglish voice</h3><ul class="bullets"><li>Speak Tanglish and it prints exactly what you said as Roman Tanglish text</li><li>Reads text back aloud, all free and local</li><li>Includes a dataset app for recording and editing audio to fine-tune Whisper</li><li>Planned next: support for AI tools like Claude and Cursor via MCP / other integrations</li></ul></article>
+      <article class="card build-card wide"><h3>Music scrapers</h3><ul class="bullets"><li>Collects albums, tracks and music directors into clean CSVs</li><li>Year browsing, upserts, id tables and rate limiting</li><li>Planned next: a recommendation engine that takes listening events like manual plays, searches and repeats, finds how songs relate to each other, and suggests songs from those relations</li></ul></article>
+      <article class="card build-card "><h3>PR review skill</h3><p>A Claude Code skill that reads a pull request, lists the issues and drafts review comments into a pending review. I check and submit the review myself.</p></article>
+      <article class="card build-card "><h3>MCP servers</h3><p>Custom Model Context Protocol servers built with FastMCP to give AI agents access to real tools and data.</p></article>
+      <article class="card build-card "><h3>Phone personalization app</h3><p>Personal Flutter app for automation, widgets, notifications and quick actions on my phone. Sideloaded, not published.</p></article>
+    </div>
   </section>
 
   <section id="experience">
@@ -98,90 +108,89 @@
       <h2 class="title">Experience</h2>
       <a class="all" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF) <span aria-hidden="true">→</span></a>
     </div>
-    <p class="about-text xp-intro">Product work delivered as a Francium Tech engineer since May 2021, plus freelance projects.</p>
-    <article class="xp-row">
-      <div class="xp-left">
-        <p class="xp-role">Full Stack Developer</p>
-        <p class="xp-when">Oct 2026 – Present</p>
+    <p class="about-text ex-intro">Product work as a Francium Tech engineer since May 2021. The last three years, side by side:</p>
+    <div class="tl">
+      <p class="tl-legend"><span class="fr">Francium Tech</span><span class="fl">Freelance</span></p>
+      <div class="tl-scroll">
+        <div class="tl-chart">
+          <div class="tl-years"><span>2024</span><span>2025</span><span>2026</span></div>
+        <a class="tl-lane" data-id="teldat" href="#ex-teldat"><span class="tl-out" style="right:8.333%">Teldat VPN</span><span class="tl-bar fr" style="left:91.667%;width:5.556%"></span></a>
+        <a class="tl-lane" data-id="fampic" href="#ex-fampic"><span class="tl-out" style="right:11.111%">Fampic Registry</span><span class="tl-bar fl" style="left:88.889%;width:5.556%"></span></a>
+        <a class="tl-lane" data-id="magizh" href="#ex-magizh"><span class="tl-bar fl" style="left:69.444%;width:27.778%">Magizh Foods</span></a>
+        <a class="tl-lane" data-id="gsa" href="#ex-gsa"><span class="tl-bar fr" style="left:66.667%;width:25.000%">Golden Set Analytics</span></a>
+        <a class="tl-lane" data-id="atrium" href="#ex-atrium"><span class="tl-bar fr" style="left:50.000%;width:16.667%">Atrium</span></a>
+        <a class="tl-lane" data-id="panagro" href="#ex-panagro"><span class="tl-bar fr" style="left:2.778%;width:47.222%">Pan Agro</span></a>
+        </div>
       </div>
+    </div>
+    <div class="ex-list">
+    <article class="ex-item fr" id="ex-teldat" data-id="teldat">
+      <p class="ex-when"><span>Oct 2026</span><span>to Present</span></p>
       <div>
-        <h3><strong>Fampic Registry</strong> <span>· Freelance</span></h3>
-        <p>Built an offline-first work and payment registry for a photo studio, where devices sync peer to peer without a server.</p>
-        <ul class="tags"><li>Flutter</li><li>Rust</li><li>C#</li><li>Swift</li><li>iroh</li></ul>
-      </div>
-    </article>
-    <article class="xp-row">
-      <div class="xp-left">
-        <p class="xp-role">Technical Lead</p>
-        <p class="xp-when">Oct 2026 – Present</p>
-      </div>
-      <div>
-        <h3><strong>Teldat VPN</strong> <span>· via Francium Tech</span></h3>
-        <p>Led delivery of a multi-tenant VPN security platform across four codebases, with malware scanning and network telemetry.</p>
+        <div class="ex-head"><h3>Teldat VPN</h3><span class="ex-via">via Francium Tech</span></div>
+        <p class="ex-meta">Technical Lead</p>
+        <p class="ex-desc">Led delivery of a multi-tenant VPN security platform across four codebases, with malware scanning and network telemetry.</p>
         <ul class="tags"><li>Rails</li><li>React</li><li>Go</li><li>Rust</li><li>Kotlin</li></ul>
       </div>
     </article>
-    <article class="xp-row">
-      <div class="xp-left">
-        <p class="xp-role">Full Stack Developer</p>
-        <p class="xp-when">Feb 2026 – Present</p>
-      </div>
+    <article class="ex-item fl" id="ex-fampic" data-id="fampic">
+      <p class="ex-when"><span>Sep 2026</span><span>to Oct 2026</span></p>
       <div>
-        <h3><strong>Magizh Foods</strong> <span>· Freelance</span></h3>
-        <p>Built a cloud kitchen platform solo: meal subscriptions, four user roles on web and mobile, and WhatsApp-first ordering.</p>
+        <div class="ex-head"><h3>Fampic Registry</h3><span class="ex-via">Freelance</span></div>
+        <p class="ex-meta">Full Stack Developer</p>
+        <p class="ex-desc">Built an offline-first work and payment registry for a photo studio, where devices sync peer to peer without a server.</p>
+        <ul class="tags"><li>Flutter</li><li>Rust</li><li>C#</li><li>Swift</li><li>iroh</li></ul>
+      </div>
+    </article>
+    <article class="ex-item fl" id="ex-magizh" data-id="magizh">
+      <p class="ex-when"><span>Feb 2026</span><span>to Present</span></p>
+      <div>
+        <div class="ex-head"><h3>Magizh Foods</h3><span class="ex-via">Freelance</span></div>
+        <p class="ex-meta">Full Stack Developer</p>
+        <p class="ex-desc">Built a cloud kitchen platform solo: meal subscriptions, four user roles on web and mobile, and WhatsApp-first ordering.</p>
         <ul class="tags"><li>Rails 8</li><li>React</li><li>Flutter</li><li>Razorpay</li><li>WhatsApp API</li></ul>
       </div>
     </article>
-    <article class="xp-row">
-      <div class="xp-left">
-        <p class="xp-role">Data Engineer</p>
-        <p class="xp-when">Jan 2026 – Sep 2026</p>
-      </div>
+    <article class="ex-item fr" id="ex-gsa" data-id="gsa">
+      <p class="ex-when"><span>Jan 2026</span><span>to Sep 2026</span></p>
       <div>
-        <h3><strong>Golden Set Analytics</strong> <span>· via Francium Tech</span></h3>
-        <p>Built the data pipeline behind a tennis analytics platform: scrapers land raw rows in an intake layer and resolve into one dataset.</p>
+        <div class="ex-head"><h3>Golden Set Analytics</h3><span class="ex-via">via Francium Tech</span></div>
+        <p class="ex-meta">Data Engineer</p>
+        <p class="ex-desc">Built the data pipeline behind a tennis analytics platform: scrapers land raw rows in an intake layer and resolve into one dataset.</p>
         <ul class="tags"><li>Django</li><li>PostgreSQL</li><li>Celery</li><li>Playwright</li></ul>
       </div>
     </article>
-    <article class="xp-row">
-      <div class="xp-left">
-        <p class="xp-role">Technical Lead</p>
-        <p class="xp-when">Jul 2025 – Dec 2025</p>
-      </div>
+    <article class="ex-item fr" id="ex-atrium" data-id="atrium">
+      <p class="ex-when"><span>Jul 2025</span><span>to Dec 2025</span></p>
       <div>
-        <h3><strong>Atrium</strong> <span>· via Francium Tech</span></h3>
-        <p>Led a parental-control app for Android and iOS: database and architecture design, authentication and iOS Screen Time constraints.</p>
+        <div class="ex-head"><h3>Atrium</h3><span class="ex-via">via Francium Tech</span></div>
+        <p class="ex-meta">Technical Lead</p>
+        <p class="ex-desc">Led a parental-control app for Android and iOS: database and architecture design, authentication and iOS Screen Time constraints.</p>
         <ul class="tags"><li>Rails 8</li><li>Flutter</li><li>Kotlin</li><li>Swift</li></ul>
       </div>
     </article>
-    <article class="xp-row">
-      <div class="xp-left">
-        <p class="xp-role">Lead Developer</p>
-        <p class="xp-when">Feb 2024 – Jun 2025</p>
-      </div>
+    <article class="ex-item fr" id="ex-panagro" data-id="panagro">
+      <p class="ex-when"><span>Feb 2024</span><span>to Jun 2025</span></p>
       <div>
-        <h3><strong>Pan Agro</strong> <span>· via Francium Tech</span></h3>
-        <p>Led an agri marketplace: database design, transport tendering, market forecasting and a virtual data room.</p>
+        <div class="ex-head"><h3>Pan Agro</h3><span class="ex-via">via Francium Tech</span></div>
+        <p class="ex-meta">Lead Developer</p>
+        <p class="ex-desc">Led an agri marketplace: database design, transport tendering, market forecasting and a virtual data room.</p>
         <ul class="tags"><li>Go</li><li>Rails</li><li>React Native</li><li>Apache Druid</li><li>FastAPI</li></ul>
       </div>
     </article>
-  </section>
-
-  <section id="about">
-    <h2 class="title">About</h2>
-    <p class="about-text">I am a full stack developer and technical lead at Francium Tech, working since 2021. I like owning a product from the schema to the store release, and I am most useful where web, mobile and backend meet.</p>
-    <ul class="skills">
-      <li><b>Backend</b><span>Ruby on Rails, Django, FastAPI, Node.js, Go, Rust</span></li>
-      <li><b>Frontend and mobile</b><span>React, Next.js, Flutter, Kotlin, Swift</span></li>
-      <li><b>Data and infra</b><span>PostgreSQL, ClickHouse, Redis, Docker, Kafka</span></li>
-      <li><b>AI workflow</b><span>Claude Code agents and skills, FastMCP</span></li>
-    </ul>
+    </div>
   </section>
 
   <section id="contact">
     <h2 class="title">Contact</h2>
     <p class="about-text">Open to full stack and technical lead roles.</p>
-    <p class="links"><a href="https://github.com/Abinash0416" target="_blank" rel="noopener">GitHub</a> <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a></p>
+    <ul class="skills contact-list">
+      <li><b>Email</b><span><a href="mailto:abiabinash1323@gmail.com">abiabinash1323@gmail.com</a></span></li>
+      <li><b>Phone</b><span><a href="tel:+919080476982">+91 90804 76982</a></span></li>
+      <li><b>Location</b><span>Chennai, India</span></li>
+      <li><b>GitHub</b><span><a href="https://github.com/Abinash0416" target="_blank" rel="noopener">github.com/Abinash0416</a></span></li>
+      <li><b>Resume</b><span><a href="resume.pdf" target="_blank" rel="noopener">Download PDF</a></span></li>
+    </ul>
   </section>
 </main>
 
@@ -225,6 +234,20 @@ track.addEventListener("scroll", () => {
 chevs.forEach(b => b.addEventListener("click", () => track.scrollBy({ left: step() * b.dataset.dir, behavior: "smooth" })));
 window.addEventListener("resize", center);
 center();
+
+const tl = document.querySelector(".tl");
+document.querySelectorAll(".ex-item").forEach(item => {
+  const bar = () => tl.querySelector('.tl-lane[data-id="' + item.dataset.id + '"]');
+  const on = () => { tl.classList.add("focus"); bar().classList.add("on"); };
+  const off = () => { tl.classList.remove("focus"); bar().classList.remove("on"); };
+  item.addEventListener("mouseenter", on);
+  item.addEventListener("mouseleave", off);
+});
+
+const navBar = document.querySelector(".top");
+const setNav = () => document.documentElement.style.setProperty("--nav-h", navBar.offsetHeight + "px");
+setNav();
+window.addEventListener("resize", setNav);
 </script>
 </body>
 </html>

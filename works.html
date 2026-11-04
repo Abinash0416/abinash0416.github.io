@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work — Abinash Devendhiran</title>
+<meta name="description" content="Projects by Abinash Devendhiran, full stack developer: VPN security, data engineering, mobile and marketplace platforms.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="index.html">Abinash Devendhiran</a>
+  <nav aria-label="Primary">
+    <a href="works.html" aria-current="page">Work</a>
+    <a href="index.html#contact">Contact</a>
+    <a class="pill" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero works-hero">
+    <h1>Work</h1>
+    <p class="lede">Product work delivered as a Francium Tech engineer since 2021, plus freelance projects. Each one lists my role, what was built and the hardest part.</p>
+  </section>
+
+  <section class="case" id="teldat">
+    <div class="case-head">
+      <h2 class="title">Teldat VPN</h2>
+      <p class="case-meta"><strong>Technical Lead</strong><span>Oct 2026 – Present · via Francium Tech</span></p>
+    </div>
+    <p class="about-text">Multi-tenant VPN security platform in four codebases: admins set per-user profiles that agents enforce over OpenVPN, with Argus malware scanning and network telemetry.</p>
+    <p class="hard-box"><strong>Hard part</strong>Monitoring all traffic regardless of VPN state: full tunnel, split tunnel or VPN off, using an Android capture VPN.</p>
+    <ul class="dots">
+        <li><strong>Requirements and delivery.</strong> Gathered requirements from the client, turned them into work items, assigned them to developers and maintained them through delivery. Wrote code hands-on, including scheduled jobs.</li>
+        <li><strong>Team and code review.</strong> Led junior developers with daily stand-ups and progress tracking, and brought one structure from requirements and pull request review through to release. Reviews run manually and with AI assistance, using a custom Claude Code skill.</li>
+        <li><strong>Malware prevention.</strong> Argus updates roll out with install approval and auto-apply after 2 days. Protection works in split-tunnel and no-VPN modes, with per-user licensing, admin-forced or optional mode, expiry jobs and reconnect after sleep and power-offs.</li>
+        <li><strong>Network telemetry.</strong> NetFlow and syslog (CEF, Suricata EVE, RFC 5424) are per-user controls with multiple collectors.</li>
+    </ul>
+    <ul class="tags"><li>Ruby on Rails</li><li>Sidekiq</li><li>React</li><li>Go</li><li>ClickHouse</li><li>Rust</li><li>Tauri</li><li>Kotlin</li><li>C# (.NET 8)</li><li>SQLCipher</li><li>OpenVPN</li><li>Docker</li></ul>
+  </section>
+
+  <section class="case" id="gsa">
+    <div class="case-head">
+      <h2 class="title">Golden Set Analytics</h2>
+      <p class="case-meta"><strong>Data Engineer</strong><span>Jan 2026 – Sep 2026 · via Francium Tech</span></p>
+    </div>
+    <p class="about-text">Tennis analytics platform for rankings, stats and scouting. Celery Beat scrapers land raw rows idempotently in an intake layer, and promotion resolves them into one bedrock dataset on Django REST Framework and PostgreSQL.</p>
+    <p class="hard-box"><strong>Hard part</strong>ATP date-of-birth enrichment had never worked behind Cloudflare. Driving headless Chromium with one browser context reused across retries fixed it, taking the top 100 from 0 to 100 enriched in 14 minutes instead of 2 hours.</p>
+    <ul class="dots">
+        <li><strong>Scrapers.</strong> Built and maintained scrapers for CoreTennis, ITA, ITF, WTN and ATP/WTA with requests, BeautifulSoup and Playwright. Runs can scrape only into intake or push on to bedrock, dry-run, and use token-bucket rate limiting, targeted by tournament, tier, tour, age band or roster, with resumable full-archive sweeps.</li>
+        <li><strong>Player data.</strong> Anchored players to immutable source-of-truth details and merged records across sources using per-source trust scores. Built a country registry of 250 countries with ISO3, ISO2, numeric, IOC and FIFA codes and aliases.</li>
+        <li><strong>Backfill tooling.</strong> A snapshot, delete, re-scrape, re-promote workflow with per-batch transactions. It refuses to start without a btree index, since a BRIN index made each foreign-key check 2,119 ms against 0.55 ms.</li>
+        <li><strong>State machine repair.</strong> Repaired about 178.7k intake players stuck at new with a read-only sweep that re-ran the production matcher, and held back 104 flagged rows for human review.</li>
+    </ul>
+    <ul class="tags"><li>Python</li><li>Django</li><li>DRF</li><li>PostgreSQL (pg_trgm)</li><li>Celery Beat</li><li>Redis</li><li>Playwright</li><li>BeautifulSoup</li><li>Docker</li></ul>
+  </section>
+
+  <section class="case" id="atrium">
+    <div class="case-head">
+      <h2 class="title">Atrium</h2>
+      <p class="case-meta"><strong>Technical Lead</strong><span>Jul 2025 – Dec 2025 · via Francium Tech</span></p>
+    </div>
+    <p class="about-text">Parental-control and screen-time app for Android and iOS where parents set app, category and website limits for children. Rails 8 API on PostgreSQL, a Flutter app, Kotlin on Android and Swift Screen Time extensions on iOS.</p>
+    <p class="hard-box"><strong>Hard part</strong>iOS cannot list apps, read usage or control other apps like Android. Apps are picked with FamilyActivityPicker and stored as opaque tokens, usage comes from Device Activity threshold events, and control from Family Controls and Managed Settings shields, shared through an App Group.</p>
+    <ul class="dots">
+        <li><strong>Architecture and leadership.</strong> Started the project from scratch and finalised the base design across backend, mobile and web, with a Flutter platform-dispatch pattern so UI code never branches on OS. Led a team across Rails, Flutter, Kotlin, Swift and React, and drove the beta release.</li>
+        <li><strong>Database.</strong> Architected the schema for users, devices, limit rules, usage limits and cross-device data. Devices are unique per user and device identifier so a handed-down phone can belong to several users.</li>
+        <li><strong>Authentication and authorization.</strong> JWT authentication with password reset and Google and Apple sign-in (OIDC ID tokens verified against JWKS keys), plus role-based access with CanCanCan for parents, children and self-managed users.</li>
+        <li><strong>Android and rules.</strong> Usage tracking with UsageStatsManager and WorkManager, limits enforced locally every 5 seconds, and an Accessibility Service blocking apps and browser domains. One calculator combines schedules, usage, categories and extra-time grants into the blocked list.</li>
+    </ul>
+    <ul class="tags"><li>Ruby on Rails 8</li><li>PostgreSQL</li><li>Flutter</li><li>Kotlin</li><li>Swift</li><li>React</li><li>FCM</li><li>ActionCable</li><li>Docker</li></ul>
+  </section>
+
+  <section class="case" id="panagro">
+    <div class="case-head">
+      <h2 class="title">Pan Agro</h2>
+      <p class="case-meta"><strong>Lead Developer</strong><span>Feb 2024 – Jun 2025 · via Francium Tech</span></p>
+    </div>
+    <p class="about-text">Spain-based agri marketplace where farmers list produce, retailers place requests and transporters bid tender-style for delivery. React and React Native apps on a Rails and Go backend with PostgreSQL, Redis, Kafka, MinIO and Apache Druid.</p>
+    <p class="hard-box"><strong>Hard part</strong>Shipped the core logic (authentication, permissions, insurance premiums, price forecasting, blockchain contract calls, chat) as a compiled Go executable so the client receives no source. The API runs it as a child process over a JSON stdin/stdout protocol, with health checks and automatic restart.</p>
+    <ul class="dots">
+        <li><strong>Architecture and database.</strong> Set the initial architecture and designed the database across 100+ models covering offers, requests, orders, shipments, transport, crops, insurance and finance, with Swagger-documented APIs.</li>
+        <li><strong>Marketplace and tendering.</strong> Offers, requests, negotiations, orders and shipments with in-app chat. Transporters bid on deliveries, and an accepted offer creates a blockchain smart contract before it is confirmed and the transport contract PDF is generated.</li>
+        <li><strong>Market data and forecasting.</strong> Built market-history population APIs and scheduled jobs into Apache Druid and PostgreSQL, with ARIMA price predictions served through FastAPI behind a model selector.</li>
+        <li><strong>Team and delivery.</strong> Reviewed pull requests, handled people management, improved and approved the UI, and created and maintained the tickets.</li>
+    </ul>
+    <ul class="tags"><li>Go</li><li>Ruby on Rails</li><li>React</li><li>React Native</li><li>PostgreSQL</li><li>Apache Druid</li><li>FastAPI</li><li>MinIO</li><li>Docker</li></ul>
+  </section>
+
+  <section class="case" id="magizh">
+    <div class="case-head">
+      <h2 class="title">Magizh Foods</h2>
+      <p class="case-meta"><strong>Full Stack Developer</strong><span>Feb 2026 – Present · Freelance</span></p>
+    </div>
+    <p class="about-text">Platform for a cloud kitchen with home delivery. Customers order one-time or subscribe to plans, and the kitchen runs everything from an admin portal. Built solo and deployed on Railway.</p>
+    <p class="hard-box"><strong>Hard part</strong>WhatsApp-first flows: OTP login, order notifications, and a reminder 2 hours before the skip deadline so customers can skip a meal inside WhatsApp itself.</p>
+    <ul class="dots">
+        <li><strong>Four roles.</strong> Admin and customer on web and mobile, kitchen worker and delivery partner on mobile only, with access enforced on the backend.</li>
+        <li><strong>Flexible orders.</strong> One-time or subscription, a different delivery address per meal, and dates and shifts to include or exclude chosen while subscribing.</li>
+        <li><strong>Admin-configurable pricing.</strong> Per-plan discounts for longer plans, delivery fee by road distance via Google Maps, and a coupon and referral system.</li>
+        <li><strong>Meal skipping.</strong> Before the deadline, with the skipped meal added to the end of the subscription or refunded to the wallet.</li>
+    </ul>
+    <ul class="tags"><li>Rails 8</li><li>PostgreSQL</li><li>React</li><li>TypeScript</li><li>Flutter</li><li>Razorpay</li><li>WhatsApp API</li><li>FCM</li><li>Google Maps</li><li>Railway</li></ul>
+  </section>
+
+  <section class="case" id="fampic">
+    <div class="case-head">
+      <h2 class="title">Fampic Registry</h2>
+      <p class="case-meta"><strong>Full Stack Developer</strong><span>Sep 2026 – Oct 2026 · Freelance</span></p>
+    </div>
+    <p class="about-text">Serverless work and payment registry for a photo studio. Every phone and computer holds a full copy of the data and syncs directly with the others.</p>
+    <p class="hard-box"><strong>Hard part</strong>Conflict resolution without a server: Lamport clocks with a device id tie-break and tombstones for deletes, so every device converges to the same state without using wall-clock time.</p>
+    <ul class="dots">
+        <li><strong>Device discovery.</strong> Devices find each other through a group-secret-derived beacon and connect over iroh, with hole punching and a relay as fallback.</li>
+        <li><strong>Data sync.</strong> Devices exchange version vectors and sync only the missing events, with live push and peer-to-peer relaying.</li>
+        <li><strong>Offline-first storage.</strong> A local event log and version vector on each device, with entries rebuilt from the log and full export and import as the backup.</li>
+        <li><strong>Security.</strong> Event payloads encrypted with a shared group data key, per-login Ed25519 signatures on every event, and Argon2-derived password keys.</li>
+    </ul>
+    <ul class="tags"><li>Flutter</li><li>C#</li><li>Swift</li><li>Rust</li><li>iroh</li></ul>
+  </section>
+
+  <section id="earlier">
+    <h2 class="title">Earlier projects</h2>
+    <ul class="list">
+      <li><strong>Hero7 (2023-24)</strong><span>Migrated a C#/Angular audit app to Ruby on Rails and Vue (Pinia), including the database redesign.</span></li>
+      <li><strong>MoneySmart (2023)</strong><span>Personalised recommendations with A/B testing (ABTasty, GrowthBook) and a claims flow with SendGrid emails.</span></li>
+      <li><strong>Teldat BeActive (2022)</strong><span>PDF data extraction, real-time updates over WebSockets, and analytics queries for dashboards.</span></li>
+      <li><strong>Recruit &amp; Soul Search (2021)</strong><span>Token auth, interview scheduling jobs, and reusable Vue components.</span></li>
+    </ul>
+  </section>
+</main>
+
+<footer><p>© 2026 Abinash Devendhiran</p></footer>
+</body>
+</html>
