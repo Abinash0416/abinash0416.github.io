@@ -12,6 +12,7 @@
   <a class="brand" href="index.html">Abinash Devendhiran</a>
   <nav aria-label="Primary">
     <a href="works.html" aria-current="page">Work</a>
+    <a href="about.html">About</a>
     <a href="index.html#contact">Contact</a>
     <a class="pill" href="resume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
   </nav>
@@ -21,6 +22,25 @@
   <section class="hero works-hero">
     <h1>Work</h1>
     <p class="lede">Product work delivered as a Francium Tech engineer since 2021, plus freelance projects. Each one lists my role, what was built and the hardest part.</p>
+    <div class="tl">
+      <p class="tl-legend"><span class="fr">Francium Tech</span><span class="fl">Freelance</span></p>
+      <div class="tl-scroll">
+        <div class="tl-chart">
+          <div class="tl-years"><span>2021</span><span>2022</span><span>2023</span><span>2024</span><span>2025</span><span>2026</span></div>
+        <div class="tl-lane static"><span class="tl-bar base" style="left:5.556%;width:93.056%">Francium Tech</span></div>
+        <a class="tl-lane" data-id="teldat" href="#teldat"><span class="tl-out" style="right:4.167%">Teldat VPN</span><span class="tl-bar fr" style="left:95.833%;width:2.778%"></span></a>
+        <a class="tl-lane" data-id="fampic" href="#fampic"><span class="tl-out" style="right:5.556%">Fampic Registry</span><span class="tl-bar fl" style="left:94.444%;width:2.778%"></span></a>
+        <a class="tl-lane" data-id="magizh" href="#magizh"><span class="tl-out" style="right:15.278%">Magizh Foods</span><span class="tl-bar fl" style="left:84.722%;width:13.889%"></span></a>
+        <a class="tl-lane" data-id="gsa" href="#gsa"><span class="tl-out" style="right:16.667%">Golden Set Analytics</span><span class="tl-bar fr" style="left:83.333%;width:12.500%"></span></a>
+        <a class="tl-lane" data-id="atrium" href="#atrium"><span class="tl-out" style="right:25.000%">Atrium</span><span class="tl-bar fr" style="left:75.000%;width:8.333%"></span></a>
+        <a class="tl-lane" data-id="panagro" href="#panagro"><span class="tl-bar fr" style="left:51.389%;width:23.611%">Pan Agro</span></a>
+        <a class="tl-lane" href="#earlier"><span class="tl-bar fr" style="left:33.333%;width:18.056%">Hero7</span></a>
+        <a class="tl-lane" href="#earlier"><span class="tl-bar fr" style="left:33.333%;width:16.667%">MoneySmart</span></a>
+        <a class="tl-lane" href="#earlier"><span class="tl-bar fr" style="left:16.667%;width:16.667%">Teldat BeActive</span></a>
+        <a class="tl-lane" href="#earlier"><span class="tl-bar fr" style="left:5.556%;width:11.111%"></span><span class="tl-out right" style="left:16.667%">Recruit &amp; Soul Search</span></a>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section class="case" id="teldat">
@@ -37,6 +57,38 @@
         <li><strong>Network telemetry.</strong> NetFlow and syslog (CEF, Suricata EVE, RFC 5424) are per-user controls with multiple collectors.</li>
     </ul>
     <ul class="tags"><li>Ruby on Rails</li><li>Sidekiq</li><li>React</li><li>Go</li><li>ClickHouse</li><li>Rust</li><li>Tauri</li><li>Kotlin</li><li>C# (.NET 8)</li><li>SQLCipher</li><li>OpenVPN</li><li>Docker</li></ul>
+  </section>
+
+  <section class="case" id="fampic">
+    <div class="case-head">
+      <h2 class="title">Fampic Registry</h2>
+      <p class="case-meta"><strong>Full Stack Developer</strong><span>Sep 2026 – Oct 2026 · Freelance</span></p>
+    </div>
+    <p class="about-text">Serverless work and payment registry for a photo studio. Every phone and computer holds a full copy of the data and syncs directly with the others.</p>
+    <p class="hard-box"><strong>Hard part</strong>Conflict resolution without a server: Lamport clocks with a device id tie-break and tombstones for deletes, so every device converges to the same state without using wall-clock time.</p>
+    <ul class="dots">
+        <li><strong>Device discovery.</strong> Devices find each other through a group-secret-derived beacon and connect over iroh, with hole punching and a relay as fallback.</li>
+        <li><strong>Data sync.</strong> Devices exchange version vectors and sync only the missing events, with live push and peer-to-peer relaying.</li>
+        <li><strong>Offline-first storage.</strong> A local event log and version vector on each device, with entries rebuilt from the log and full export and import as the backup.</li>
+        <li><strong>Security.</strong> Event payloads encrypted with a shared group data key, per-login Ed25519 signatures on every event, and Argon2-derived password keys.</li>
+    </ul>
+    <ul class="tags"><li>Flutter</li><li>C#</li><li>Swift</li><li>Rust</li><li>iroh</li></ul>
+  </section>
+
+  <section class="case" id="magizh">
+    <div class="case-head">
+      <h2 class="title">Magizh Foods</h2>
+      <p class="case-meta"><strong>Full Stack Developer</strong><span>Feb 2026 – Present · Freelance</span></p>
+    </div>
+    <p class="about-text">Platform for a cloud kitchen with home delivery. Customers order one-time or subscribe to plans, and the kitchen runs everything from an admin portal. Built solo and deployed on Railway.</p>
+    <p class="hard-box"><strong>Hard part</strong>WhatsApp-first flows: OTP login, order notifications, and a reminder 2 hours before the skip deadline so customers can skip a meal inside WhatsApp itself.</p>
+    <ul class="dots">
+        <li><strong>Four roles.</strong> Admin and customer on web and mobile, kitchen worker and delivery partner on mobile only, with access enforced on the backend.</li>
+        <li><strong>Flexible orders.</strong> One-time or subscription, a different delivery address per meal, and dates and shifts to include or exclude chosen while subscribing.</li>
+        <li><strong>Admin-configurable pricing.</strong> Per-plan discounts for longer plans, delivery fee by road distance via Google Maps, and a coupon and referral system.</li>
+        <li><strong>Meal skipping.</strong> Before the deadline, with the skipped meal added to the end of the subscription or refunded to the wallet.</li>
+    </ul>
+    <ul class="tags"><li>Rails 8</li><li>PostgreSQL</li><li>React</li><li>TypeScript</li><li>Flutter</li><li>Razorpay</li><li>WhatsApp API</li><li>FCM</li><li>Google Maps</li><li>Railway</li></ul>
   </section>
 
   <section class="case" id="gsa">
@@ -87,38 +139,6 @@
     <ul class="tags"><li>Go</li><li>Ruby on Rails</li><li>React</li><li>React Native</li><li>PostgreSQL</li><li>Apache Druid</li><li>FastAPI</li><li>MinIO</li><li>Docker</li></ul>
   </section>
 
-  <section class="case" id="magizh">
-    <div class="case-head">
-      <h2 class="title">Magizh Foods</h2>
-      <p class="case-meta"><strong>Full Stack Developer</strong><span>Feb 2026 – Present · Freelance</span></p>
-    </div>
-    <p class="about-text">Platform for a cloud kitchen with home delivery. Customers order one-time or subscribe to plans, and the kitchen runs everything from an admin portal. Built solo and deployed on Railway.</p>
-    <p class="hard-box"><strong>Hard part</strong>WhatsApp-first flows: OTP login, order notifications, and a reminder 2 hours before the skip deadline so customers can skip a meal inside WhatsApp itself.</p>
-    <ul class="dots">
-        <li><strong>Four roles.</strong> Admin and customer on web and mobile, kitchen worker and delivery partner on mobile only, with access enforced on the backend.</li>
-        <li><strong>Flexible orders.</strong> One-time or subscription, a different delivery address per meal, and dates and shifts to include or exclude chosen while subscribing.</li>
-        <li><strong>Admin-configurable pricing.</strong> Per-plan discounts for longer plans, delivery fee by road distance via Google Maps, and a coupon and referral system.</li>
-        <li><strong>Meal skipping.</strong> Before the deadline, with the skipped meal added to the end of the subscription or refunded to the wallet.</li>
-    </ul>
-    <ul class="tags"><li>Rails 8</li><li>PostgreSQL</li><li>React</li><li>TypeScript</li><li>Flutter</li><li>Razorpay</li><li>WhatsApp API</li><li>FCM</li><li>Google Maps</li><li>Railway</li></ul>
-  </section>
-
-  <section class="case" id="fampic">
-    <div class="case-head">
-      <h2 class="title">Fampic Registry</h2>
-      <p class="case-meta"><strong>Full Stack Developer</strong><span>Sep 2026 – Oct 2026 · Freelance</span></p>
-    </div>
-    <p class="about-text">Serverless work and payment registry for a photo studio. Every phone and computer holds a full copy of the data and syncs directly with the others.</p>
-    <p class="hard-box"><strong>Hard part</strong>Conflict resolution without a server: Lamport clocks with a device id tie-break and tombstones for deletes, so every device converges to the same state without using wall-clock time.</p>
-    <ul class="dots">
-        <li><strong>Device discovery.</strong> Devices find each other through a group-secret-derived beacon and connect over iroh, with hole punching and a relay as fallback.</li>
-        <li><strong>Data sync.</strong> Devices exchange version vectors and sync only the missing events, with live push and peer-to-peer relaying.</li>
-        <li><strong>Offline-first storage.</strong> A local event log and version vector on each device, with entries rebuilt from the log and full export and import as the backup.</li>
-        <li><strong>Security.</strong> Event payloads encrypted with a shared group data key, per-login Ed25519 signatures on every event, and Argon2-derived password keys.</li>
-    </ul>
-    <ul class="tags"><li>Flutter</li><li>C#</li><li>Swift</li><li>Rust</li><li>iroh</li></ul>
-  </section>
-
   <section id="earlier">
     <h2 class="title">Earlier projects</h2>
     <ul class="list">
@@ -131,5 +151,11 @@
 </main>
 
 <footer><p>© 2026 Abinash Devendhiran</p></footer>
+<script>
+const navBar = document.querySelector(".top");
+const setNav = () => document.documentElement.style.setProperty("--nav-h", navBar.offsetHeight + "px");
+setNav();
+window.addEventListener("resize", setNav);
+</script>
 </body>
 </html>
